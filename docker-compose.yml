@@ -1,0 +1,9 @@
+version: "3"
+services:
+  frontend:
+    build: ./docker-weather-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./docker-weather-frontend:/app
+    command: npm run dev
